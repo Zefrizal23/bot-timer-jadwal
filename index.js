@@ -22,7 +22,7 @@ client.once('ready', () => {
     // Format Cron: "Detik Menit Jam Tanggal Bulan Hari"
     // Contoh: "0 0 8 * * *" artinya setiap jam 08:00:00 pagi setiap hari
     
-    cron.schedule('0 45 20 * * *', () => {
+    cron.schedule('0 55 20 * * *', () => {
         const channel = client.channels.cache.get(CHANNEL_ID);
         
         if (channel) {
@@ -40,3 +40,4 @@ client.once('ready', () => {
 
 
 client.login(process.env.TOKEN);
+
