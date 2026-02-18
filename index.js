@@ -7,6 +7,7 @@ const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
     ]
 });
 
@@ -36,5 +37,6 @@ client.once('ready', () => {
         timezone: "Asia/Jakarta" // PENTING: Sesuaikan zona waktu WIB
     });
 });
+
 
 client.login(process.env.TOKEN);
