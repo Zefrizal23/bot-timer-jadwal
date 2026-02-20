@@ -22,12 +22,26 @@ client.once('ready', () => {
     // Format Cron: "Detik Menit Jam Tanggal Bulan Hari"
     // Contoh: "0 0 8 * * *" artinya setiap jam 08:00:00 pagi setiap hari
     
-    cron.schedule('0 0 21 * * *', () => {
+    cron.schedule('0 13 10 * * *', () => {
+        const channel = client.channels.cache.get(CHANNEL_ID);
+        if (channel) {
+            // Mengirim pesan dan tag role
+            channel.send(`WOIIIII, 1 JAM LAGI IMSAKK!!! <@&${ROLE_ID}>!!! 📢\nSudah jam 03.00, waktunya sahur, keburu imsakk!!`);
+            console.log('Pesan jadwal berhasil dikirim.');
+        } else {
+            console.log('Channel tidak ditemukan/bot tidak punya akses.');
+        }
+    }, {
+        scheduled: true,
+        timezone: "Asia/Jakarta" // PENTING: Sesuaikan zona waktu WIB
+    });
+    
+    cron.schedule('0 13 10 * * *', () => {
         const channel = client.channels.cache.get(CHANNEL_ID);
         
         if (channel) {
             // Mengirim pesan dan tag role
-            channel.send(`Halo <@&${ROLE_ID}>! 📢\nSudah jam 20:10, waktunya kegiatan dimulai! Jangan lupa absen ya.`);
+            channel.send(`WOIIIII, DAH MAGRIBBB!!! <@&${ROLE_ID}>!!! 📢\nSELAMAT BERBUKA BAGI PARA BINTANG YANG MENUNAIKANNN ❤️`);
             console.log('Pesan jadwal berhasil dikirim.');
         } else {
             console.log('Channel tidak ditemukan/bot tidak punya akses.');
@@ -40,5 +54,6 @@ client.once('ready', () => {
 
 
 client.login(process.env.TOKEN);
+
 
 
