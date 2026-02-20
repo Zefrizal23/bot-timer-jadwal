@@ -36,7 +36,7 @@ client.once('ready', () => {
         timezone: "Asia/Jakarta" // PENTING: Sesuaikan zona waktu WIB
     });
     
-    cron.schedule('0 13 10 * * *', () => {
+    cron.schedule('0 14 10 * * *', () => {
         const channel = client.channels.cache.get(CHANNEL_ID);
         
         if (channel) {
@@ -54,6 +54,7 @@ client.once('ready', () => {
 
 
 client.login(process.env.TOKEN);
+
 
 
 
