@@ -22,7 +22,7 @@ client.once('ready', () => {
     // Format Cron: "Detik Menit Jam Tanggal Bulan Hari"
     // Contoh: "0 0 8 * * *" artinya setiap jam 08:00:00 pagi setiap hari
     
-    cron.schedule('0 13 10 * * *', () => {
+    cron.schedule('0 0 3 * * *', () => {
         const channel = client.channels.cache.get(CHANNEL_ID);
         if (channel) {
             // Mengirim pesan dan tag role
@@ -36,7 +36,7 @@ client.once('ready', () => {
         timezone: "Asia/Jakarta" // PENTING: Sesuaikan zona waktu WIB
     });
     
-    cron.schedule('0 14 10 * * *', () => {
+    cron.schedule('0 0 18 * * *', () => {
         const channel = client.channels.cache.get(CHANNEL_ID);
         
         if (channel) {
@@ -54,6 +54,7 @@ client.once('ready', () => {
 
 
 client.login(process.env.TOKEN);
+
 
 
 
