@@ -12,7 +12,7 @@ const client = new Client({
 });
 
 // --- KONFIGURASI ID ---
-const CHANNEL_ID = '1341576966507073578'; // Ganti dengan ID Channel
+const CHANNEL_ID = '1340649354637082760'; // Ganti dengan ID Channel
 const ROLE_ID = '1473667840136581303';    // Ganti dengan ID Role
 
 client.once('ready', () => {
@@ -54,6 +54,7 @@ client.once('ready', () => {
 
 
 client.login(process.env.TOKEN);
+
 
 
 
